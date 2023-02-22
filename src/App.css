@@ -1,0 +1,47 @@
+body{
+  background: #141414;
+  color: #ffffff;
+}
+
+/* Allows to scroll horizontally to see the movies */
+.movie-app > .row{
+  overflow-x: auto;
+  flex-wrap: nowrap;
+}
+
+/* fixes width taken by row to allow all movies in same row */
+.row>*{
+  width: auto;
+}
+
+/* contains movie poster and favourites */
+.image-container{
+  position: relative;
+  transition: transform 0.2s;
+}
+
+/* Scales the poster when hovered */
+.image-container:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.image-container:hover .overlay{
+  opacity: 1;
+}
+
+.overlay{
+  position: absolute;
+  background: #272323;
+  width: 100%;
+  transition: 0.5s ease;
+  opacity: 0;
+  bottom: 0;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.mr-5{
+  margin-right: 5px;
+}
